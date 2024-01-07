@@ -7,7 +7,10 @@ import { UjfoglalasComponent } from './parts/ujfoglalas/ujfoglalas.component';
 const routes: Routes = [
   {path:'fooldal', component:FooldalComponent},
   {path:'foglalasok', component:FoglalasokComponent},
-  {path:'ujfoglalas', component:UjfoglalasComponent}
+  {path:'ujfoglalas', component:UjfoglalasComponent},
+  {path:'', component:FooldalComponent},
+  {path:'**', component:FooldalComponent},
+
 ];
 
 @NgModule({
