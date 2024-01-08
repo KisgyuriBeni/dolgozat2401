@@ -9,6 +9,7 @@ import { FooldalComponent } from './parts/fooldal/fooldal.component';
 import { NavbarComponent } from './parts/navbar/navbar.component';
 import { FoglalasokComponent } from './parts/foglalasok/foglalasok.component';
 import { UjfoglalasComponent } from './parts/ujfoglalas/ujfoglalas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { UjfoglalasComponent } from './parts/ujfoglalas/ujfoglalas.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     FormsModule
 
   ],

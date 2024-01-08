@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BaseService } from 'src/app/services/base.service';
 
 @Component({
   selector: 'app-foglalasok',
@@ -6,18 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./foglalasok.component.css']
 })
 export class FoglalasokComponent {
-  id:any
-  cim:any
-  datum:any
-  fo:any
-  iranyitoszam:any
-  nev:any
+  foglalasok:any
 
   oszlopok=[
+    {key:"id", text:"Id"},
     {key:"cim", text:"Cím"},
     {key:"datum", text:"Dátum"},
     {key:"fo", text:"Fő"},
     {key:"iranyitoszam", text:"Irányítószám"},
     {key:"nev", text:"Név"},
   ]
+  constructor(private base:BaseService){
+    this.base.getData('foglalasok').subscribe(
+      (adatok)=>this.foglalasok=adatok
+    )
+    
+  }
 }

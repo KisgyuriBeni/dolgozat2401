@@ -1,1 +1,17 @@
-<p>foglalasok works!</p>
+<!-- {{foglalasok|json}} -->
+
+<div class="container">
+    <div class="card mt-5 shadow">
+        <div class="row">
+            <div *ngFor="let oszlop of oszlopok" class="col fw-bold">
+                {{oszlop['text']}}
+            </div>
+        </div>
+        <div *ngFor="let foglalas of foglalasok" class="row my-2">
+            <div *ngFor="let oszlop of oszlopok" class="col">
+                {{foglalas[oszlop.key]}}
+            </div>
+        </div>
+    </div>
+    
+</div>
