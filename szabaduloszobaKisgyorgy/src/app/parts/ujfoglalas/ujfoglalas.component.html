@@ -1,1 +1,50 @@
-<p>ujfoglalas works!</p>
+<div class="container">
+    <div class="card p-3 shadow mt-3 ">
+        <div>
+            <h3>Új foglalások leadása</h3>
+            <p>
+                Ügyelj arra, hogy minden mezőt helyesen tölts ki!
+            </p>
+        </div>
+        <!-- <input [(ngModel)]="allat.faj" type="text" class="form-control" id="faj"> -->
+        <div class="mb-3 row">
+            <label for="address" class="col-sm-2 col-form-label">Cím</label>
+            <div class="col-sm-10">
+              <input [(ngModel)]="foglalas.cim"
+              type="text" class="form-control" id="address">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="date" class="col-sm-2 col-form-label">Dátum</label>
+            <div class="col-sm-10">
+              <input [(ngModel)]="foglalas.datum"
+              type="date" class="form-control" id="date">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="people" class="col-sm-2 col-form-label">Hány fő?</label>
+            <div class="col-sm-10">
+              <input [(ngModel)]="foglalas.fo"
+              type="text" class="form-control" id="people">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="postnumbername" class="col-sm-2 col-form-label">Irányítószám</label>
+            <div class="col-sm-10">
+              <input [(ngModel)]="foglalas.iranyitoszam"
+              type="text" class="form-control" id="postnumbername">
+            </div>
+        </div>
+        <div class="mb-3 row mb-2">
+            <label for="name" class="col-sm-2 col-form-label">Név</label>
+            <div class="col-sm-10">
+              <input [(ngModel)]="foglalas.nev"
+              type="text" class="form-control" id="name">
+            </div>
+        </div>
+        <div>
+            <button (click)="kuldApi()"
+             type="btn" class="btn btn-primary">Mentés</button>
+        </div>
+    </div>
+</div>
